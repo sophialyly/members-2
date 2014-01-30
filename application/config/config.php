@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://xemeserver/projects/CI_membership/';
+$config['base_url']	= 'http://supportmyshop.com/cc/member/';
 
 /*
 |--------------------------------------------------------------------------

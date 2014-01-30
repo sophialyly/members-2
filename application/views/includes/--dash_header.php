@@ -39,7 +39,7 @@
         <link rel="stylesheet" href="<?php //echo base_url('assets/flaty_assets/css/flaty-responsive.css');?>">
         
          <!--page specific Tables css styles-->
-        <link rel="stylesheet" href="<?php echo base_url('assets/flaty_assets/data-tables/DT_bootstrap.css');?>" />
+        <link rel="stylesheet" href="<?php //echo base_url('assets/flaty_assets/data-tables/DT_bootstrap.css');?>" />
 		
         <link rel="shortcut icon" href="<?php //echo base_url('assets/flaty_assets/img/favicon.html');?>">
 
@@ -56,7 +56,7 @@
 
         <!--page specific plugin scripts-->
         <script src="<?php echo base_url('assets/js/tablesorter/jquery.tablesorter.js');?>"></script>
-        <script src="<?php //echo base_url('assets/js/tablesorter/tables.js');?>"></script>
+        <script src="<?php echo base_url('assets/js/tablesorter/tables.js');?>"></script>
 		<!-- End New theme --->
 		
 		
@@ -83,8 +83,8 @@
         <script type="text/javascript" src="<?php //echo base_url('assets/flaty_assets/ckeditor/ckeditor.js');?>"></script> 
         
          <!--page specific Tables plugin scripts-->
-        <script type="text/javascript" src="<?php echo base_url('assets/flaty_assets/data-tables/jquery.dataTables.js');?>"></script>
-        <script type="text/javascript" src="<?php echo base_url('assets/flaty_assets/data-tables/DT_bootstrap.js');?>"></script>
+        <script type="text/javascript" src="<?php //echo base_url('assets/flaty_assets/data-tables/jquery.dataTables.js');?>"></script>
+        <script type="text/javascript" src="<?php //echo base_url('assets/flaty_assets/data-tables/DT_bootstrap.js');?>"></script>
          
          <!--page specific Validation plugin scripts-->
         <script type="text/javascript" src="<?php //echo base_url('assets/flaty_assets/jquery-validation/dist/jquery.validate.min.js');?>"></script>
@@ -178,16 +178,16 @@
 		</script>
 		
         <!--page specific datepicker styles-->
-		<!--<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>-->
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
    <!-- <link rel="stylesheet" href="http://jqueryui.com/resources/demos/style.css" />-->
 
 		<!--<link rel="stylesheet" type="text/css" href="<?php //echo base_url('assets/css/jquery-ui.css');?>" />
     <script src="<?php //echo base_url('assets/js/jquery-1.9.1.js');?>" type="text/javascript" ></script>
     <script src="<?php //echo base_url('assets/css/jquery-ui.js');?>" type="text/javascript" ></script>-->
     <!--<link rel="stylesheet" href="http://jqueryui.com/resources/demos/style.css" />-->
-   <!--<script type="text/javascript">
+    <script type="text/javascript">
     $(function() {
 	var date = $('#datepicker').datepicker({ dateFormat: 'yy-mm-dd' }).val();
        $( "#datepicker" ).datepicker();
@@ -195,11 +195,10 @@
 	    $( "#datepicker2" ).datepicker({ dateFormat: 'yy-mm-dd' }).val();
 		
     });
-    </script>-->
+    </script>
 	
 		
 		<!--end page specific datepicker styles-->
-		
     </head>
 	 <body>
 
@@ -230,10 +229,10 @@
             <li><a href="bootstrap-grid.html"><i class="fa fa-wrench"></i> Bootstrap Grid</a></li>
             <li><a href="blank-page.html"><i class="fa fa-file"></i> Blank Page</a></li>-->
             <li class="dropdown">
-              <a href="<?php echo base_url().'index.php/settings'?>" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-caret-square-o-down"></i> Settings <b class="caret"></b></a>
+              <a href="<?php echo base_url().'index.php/setting'?>" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-caret-square-o-down"></i> Settings <b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <!--<li><a href="#">Settings</a></li>-->
-                <li <?php if($this->uri->segment(1)==='setting'){?> class="active" <? } ?>><a href="<?php echo base_url().'index.php/setting/edit'?>">Company</a></li>
+                <li <?php if($this->uri->segment(1)==='settings'){?> class="active" <? } ?>><a href="<?php echo base_url().'index.php/setting/edit'?>">Company</a></li>
                 <li><a href="#">Tax</a></li>
                 <li><a href="#">Payments</a></li>
 				<li><a href="#">Email Templates</a></li>

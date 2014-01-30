@@ -39,6 +39,7 @@
 */
 
 $route['default_controller'] = "auth/login";
+$route['member/index/(:any)']= "member/index/$1";
 $route['404_override'] = '';
 
 

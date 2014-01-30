@@ -13,9 +13,9 @@
             <!-- BEGIN Sidebar -->
             <div id="sidebar" class="nav-collapse">
                 <!-- BEGIN Navlist -->
-                <ul class="nav nav-list">
+                <!--<ul class="nav nav-list">
                     <!-- BEGIN Search Form -->
-                    <li>
+                    <!--<li>
                         <form target="#" method="GET" class="search-form">
                             <span class="search-pan">
                                 <button type="submit">
@@ -26,7 +26,7 @@
                         </form>
                     </li>
                     <!-- END Search Form -->
-                    <li class="active">
+                  <!--  <li class="active">
                         <a href="<?php echo base_url().'index.php/dashboard'?>">
                             <i class="icon-dashboard"></i>
                             <span>Dashboard</span>
@@ -34,31 +34,34 @@
                     </li>
 
                     <li>
-                        <a href="#" class="dropdown-toggle">
+                        <a href="<?php echo base_url().'index.php/member'?>" class="dropdown-toggle">
                             <i class="icon-desktop"></i>
-                            <span>Memebership</span>
+                            <span>Memebers</span>
                             <b class="arrow icon-angle-right"></b>
                         </a>
 
                         <!-- BEGIN Submenu -->
-                        <ul class="submenu">
+                       <!-- <ul class="submenu">
                             <li><?php //echo anchor('event/create/','Add Event');?></li>
                             <li><?php //echo anchor('event','Manage Event');?></li>
                          </ul>
                         <!-- END Submenu -->
-                    </li>
+                   <!-- </li>
 
                     <li>
-                        <a href="<?php echo base_url().'index.php/event/calendar'?>">
-                            <i class="icon-calendar"></i>
-                            <span>Calendar</span>
+                        <a href="<?php echo base_url().'index.php/payment'?>" class="dropdown-toggle">
+                            <i class="icon-desktop"></i>
+                            <span>Payment</span>
+                            <b class="arrow icon-angle-right"></b>
                         </a>
+
                     </li>
 
                     <li>
-                        <a href="gallery.html">
-                            <i class="icon-picture"></i>
-                            <span>Gallery</span>
+                        <a href="<?php echo base_url().'index.php/invoice'?>" class="dropdown-toggle">
+                            <i class="icon-desktop"></i>
+                            <span>Invoice</span>
+                            <b class="arrow icon-angle-right"></b>
                         </a>
                     </li>
 
@@ -70,7 +73,7 @@
                         </a>
 
                         <!-- BEGIN Submenu -->
-                        <ul class="submenu">
+                      <!--  <ul class="submenu">
                         	 <li><?php echo anchor('setting/edit/','General');?></li>
                             <li><?php echo anchor('auth/edit_user/','Account Setting');?></li>
                             <li><?php echo anchor('setting/users/','Users Accounts');?></li>
@@ -78,14 +81,27 @@
                             <li><?php echo anchor('billing/booking/','Bookings');?></li>
                         </ul>
                         <!-- END Submenu -->
-                    </li>
-                </ul>
+                  <!--  </li>
+                </ul>-->
                 <!-- END Navlist -->
+				<div id="page-wrapper">
 
+        <div class="row">
+          <div class="col-lg-12">
+            <h1>Dashboard <small>Statistics Overview</small></h1>
+                <ul class="breadcrumb">
+                        <li class="active"><i class="icon-file-alt"></i><a href="<?php echo base_url().'index.php/dashboard'?>"> Dashboard</a></li>
+									<li><a href="<?php echo base_url().'index.php/payment'?>"> Payment</a></li>
+									<li><a href="<?php echo base_url().'index.php/invoice'?>"> Invoice</a></li>
+									<li><a href="#"> Membership</a></li>
+									<li><a href="<?php echo base_url().'index.php/member'?>"> Members</a></li>
+									<li><a href="#"> setting</a></li>
+									<li><a href="#"> Help</a></li>
+                  </ul>
+          </div>
+        </div>
                 <!-- BEGIN Sidebar Collapse Button -->
-                <div id="sidebar-collapse" class="visible-desktop">
-                    <i class="icon-double-angle-left"></i>
-                </div>
+                
                 <!-- END Sidebar Collapse Button -->
             </div>
             <!-- END Sidebar -->
@@ -101,87 +117,28 @@
                 </div>-->
                 <!-- END Page Title -->
 
-                <!-- BEGIN Breadcrumb -->
-                <div id="breadcrumbs">
-                    <ul class="breadcrumb">
-                        <li class="active"><i class="icon-file-alt"></i> Dashboard</li>
-										   <li><a href="#"> Payment</a></li>
-										   <li><a href="#"> Invoice</a></li>
-										   <li><a href="#"> Membership</a></li>
-										   <li><a href="#"> Members</a></li>
-										   <li><a href="#"> setting</a></li>
-										   <li><a href="#"> Help</a></li>
-                    </ul>
-                </div>
-                <!-- END Breadcrumb -->
-
-                <!-- BEGIN Main Content -->
-                <div class="row-fluid">
-                    <div class="span7">
-                        <div class="box">
-                            <div class="box-title">
-                                <h3><i class="icon-bar-chart"></i> Average Income 2013 </h3>
-                                <div class="box-tool">
-                                    <a data-action="collapse" href="#"><i class="icon-chevron-up"></i></a>
-                                    <a data-action="close" href="#"><i class="icon-remove"></i></a>
-                                </div>
-                            </div>
-							<select name="report" value="Select">
+              <div class="row">
+          <div class="col-lg-12">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-bar-chart-o"></i> Average Income 2013</h3>
+              </div>
+              <div class="panel-body">
+                <div id="morris-chart-area">
+				<select name="report" value="Select">
 							<option value="Weekly">Weekly</option>
 							<option value="Monthly">Monthly</option>
 							</select>
 							<div id="container" style="width:100%; height:400px;"></div>
 							
+				</div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-                            <!--<div class="box-content">
-                                <div id="visitors-chart" style="margin-top:20px; position:relative; height: 290px;"></div>
-                            </div>-->
-                        </div>
-                    </div>
-                    <!--<div class="span5">
-                        <div class="box">
-                            <div class="box-title">
-                                <h3><i class="icon-bar-chart"></i> Weekly Visitors Stat</h3>
-                                <div class="box-tool">
-                                    <a data-action="collapse" href="#"><i class="icon-chevron-up"></i></a>
-                                    <a data-action="close" href="#"><i class="icon-remove"></i></a>
-                                </div>
-                            </div>
-                            <div class="box-content">
-                                <ul class="weekly-stats">
-                                    <li>
-                                        <span class="inline-sparkline">134,178,264,196,307,259,287</span>
-                                        Visits: <span class="value">376</span>
-                                    </li>
-                                    <li>
-                                        <span class="inline-sparkline">89,124,197,138,235,169,186</span>
-                                        Unique Visitors: <span class="value">238</span>
-                                    </li>
-                                    <li>
-                                        <span class="inline-sparkline">625,517,586,638,669,698,763</span>
-                                        Page Views: <span class="value">514</span>
-                                    </li>
-                                    <li>
-                                        <span class="inline-sparkline">1.34,2.98,0.76,1.29,1.86,1.68,1.92</span>
-                                        Pages / Visit: <span class="value">1.43</span>
-                                    </li>
-                                    <li>
-                                        <span class="inline-sparkline">2.34,2.67,1.47,1.97,2.25,2.47,1.27</span>
-                                        Avg. Visit Duration: <span class="value">00:02:34</span>
-                                    </li>
-                                    <li>
-                                        <span class="inline-sparkline">70.34,67.41,59.45,65.43,78.42,75.92,74.29</span>
-                                        Bounce Rate: <span class="value">73.56%</span>
-                                    </li>
-                                    <li>
-                                        <span class="inline-sparkline">78.12,74.52,81.25,89.23,86.15,91.82,85.18</span>
-                                        % New Visits: <span class="value">82.65%</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>-->
-                </div>
+                <!-- BEGIN Main Content -->
+                
 
                 <!--<div class="row-fluid">
                     <!--<div class="span7">
@@ -615,11 +572,11 @@
                 </div>-->
                 <!-- END Main Content -->
                 
-                <footer>
+               <!-- <footer>
                     <p>2013 © Membership .</p>
                 </footer>
 
-                <a id="btn-scrollup" class="btn btn-circle btn-large" href="#"><i class="icon-chevron-up"></i></a>
+                <a id="btn-scrollup" class="btn btn-circle btn-large" href="#"><i class="icon-chevron-up"></i></a>-->
             </div>
             <!-- END Content -->
         </div>
